@@ -90,3 +90,45 @@ function calcularAreaCuadrado() {
   const area = areaCuadrado(value);
   alert(area);
 }
+
+// Triangulo
+function calcularPerimetroTriangulo() {
+  const ladoA = document.getElementById("ladoA").value;
+  const ladoB = document.getElementById("ladoB").value;
+  const ladoBase = document.getElementById("ladoBase").value;
+
+  let lado1 = parseInt(ladoA)
+  let lado2 = parseInt(ladoB)
+  let lado3 = parseInt(ladoBase)
+
+  const perimetro = perimetroTriangulo(lado1, lado2, lado3);
+  alert(perimetro);
+  console.log(perimetro)
+}
+
+function calcularAreaTriangulo(){
+  const ladoA = document.getElementById("ladoA").value;
+  const ladoB = document.getElementById("ladoB").value;
+
+  const area = areaTriangulo(ladoA, ladoB);
+  console.log(areaTriangulo)
+  alert(area);
+  console.log(area)
+}
+
+function calcularAlturaTrianguloIsoceles(){
+  const ladoA = document.getElementById("ladoA").value;
+  const ladoB = document.getElementById("ladoB").value;
+  const ladoBase = document.getElementById("ladoBase").value;
+  if(ladoA == ladoB && ladoB != ladoBase){
+      const lados = Math.pow(ladoA, 2);
+      console.log(lados);
+
+      const base = Math.pow(ladoBase, 2) / 4;
+      console.log(base);
+      
+      const resultadoLadosBase =  lados - base;
+      const h = Math.sqrt(resultadoLadosBase);  
+      alert(h)    
+  }
+}

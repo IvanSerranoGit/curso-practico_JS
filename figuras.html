@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Figuras Geometricas | Curso practico</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras geométricas | Curso Práctico de JavaScript</title>
 </head>
 <body>
-	<h1>Figuras geométricas</h1>
-	<script src="./figuras.js"></script>
+  <header>
+    <h1>
+      Figuras geométricas
+    </h1>
+    <p>Este es el primer taller del curso práctico de JavaScript</p>
+  </header>
+
+  <section>
+    <h2>Calcula el área y perímetro de un cuadrado</h2>
+    <form>
+      <label for="InputCuadrado">
+        Escribe cuánto mide cada lado de tu cuadrado:
+      </label>
+      <input id="InputCuadrado" type="number" />
+      <button type="button" onclick="calcularPerimetroCuadrado()">
+        Calcular el perímetro
+      </button>
+      <button type="button" onclick="calcularAreaCuadrado()">
+        Calcular el área
+      </button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Calcula el área y perímetro de un Triangulo</h2>
+	<p>la siguiente calculadora puede realizar las operaciones para calcular el area y perimetro de un triangulo, ademas de detectar si el triangulo es o no isoceles, en caso de serlo procedera a calcular la altura del mismo</p>
+    <form>
+      <label for="LadoA">
+        cuanto mide el lado A
+      </label>
+
+      <input id="ladoA" type="number" />
+
+	  <label for="ladoB">
+        cuanto mide el lado B
+      </label>
+
+	  <input id="ladoB" type="number" />
+
+	  <label for="ladoBase">
+        cuanto mide el lado Base
+      </label>
+
+	  <input id="ladoBase" type="number" />
+
+      <button type="button" onclick="calcularPerimetroTriangulo()">
+        Calcular el perímetro
+      </button>
+      <button type="button" onclick="calcularAreaTriangulo(), calcularAlturaTrianguloIsoceles()">
+        Calcular el área
+      </button>
+    </form>
+  </section>
+
+  <script src="./figurasFunciones.js"></script>
 </body>
 </html>
